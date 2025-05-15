@@ -9,10 +9,10 @@
     </parent>
 
     <groupId>com.mojo.algorithms</groupId>
-    <artifactId>mojo-algorithms-common</artifactId>
+    <artifactId>mojo-common</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <name>mojo-algorithms-common</name>
+    <name>mojo-common</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
