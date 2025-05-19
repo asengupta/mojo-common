@@ -1,8 +1,8 @@
 package com.mojo.algorithms.domain;
 
+import com.mojo.algorithms.id.Identifiable;
 import org.apache.commons.text.StringEscapeUtils;
 import org.jgrapht.Graph;
-import com.mojo.algorithms.id.Identifiable;
 
 import java.util.ArrayList;
 import java.util.List;

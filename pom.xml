@@ -44,6 +44,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-text</artifactId>
+            <version>1.13.1</version>
+        </dependency>
+        <dependency>
             <groupId>com.mojo.woof</groupId>
             <artifactId>woof</artifactId>
             <version>1.0-SNAPSHOT</version>
@@ -66,11 +71,6 @@
         <dependency>
             <groupId>org.jgrapht</groupId>
             <artifactId>jgrapht-ext</artifactId>
-            <version>1.5.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jgrapht</groupId>
-            <artifactId>jgrapht-io</artifactId>
             <version>1.5.2</version>
         </dependency>
         <dependency>
