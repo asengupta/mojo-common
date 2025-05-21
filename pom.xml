@@ -19,7 +19,6 @@
         <lombok.version>1.18.38</lombok.version>
         <google.guava.version>33.4.8-jre</google.guava.version>
         <slf4j.version>1.6.2</slf4j.version>
-        <logback.classic.version>1.5.7</logback.classic.version>
         <lsp4j.version>0.14.0</lsp4j.version>
         <maven.assembly.plugin.version>3.2.0</maven.assembly.plugin.version>
         <picocli.version>4.7.6</picocli.version>
