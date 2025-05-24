@@ -25,6 +25,12 @@ public abstract class TranspilerNode implements Identifiable, GenericTreeNode<Tr
         this(ImmutableList.of(), Map.of(), categories);
     }
 
+    public TranspilerNode(List<SemanticCategory> categories, String id) {
+        this.properties = ImmutableMap.of();
+        this.categories = categories;
+        this.id = id;
+    }
+
     protected TranspilerNode(List<TranspilerNode> childTranspilerNodes, Map<String, Object> additionalAttributes, List<SemanticCategory> categories) {
         this.childTranspilerNodes.addAll(childTranspilerNodes);
         this.properties = additionalAttributes;

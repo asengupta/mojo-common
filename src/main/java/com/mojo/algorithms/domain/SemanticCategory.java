@@ -12,6 +12,8 @@ public enum SemanticCategory {
     GENERIC_CODE,
     UNKNOWN,
     IO,
+    MACRO,
+    SQL,
     DIALECT,
     PROGRAM,
     METADATA,
@@ -31,5 +33,6 @@ public enum SemanticCategory {
     NULL,
     ITERATION,
     BLOCK_BOUNDARY,
-    CODE_ROOT
+    COMMENT,
+    CALL_EXTERNAL, CODE_ROOT
 }
