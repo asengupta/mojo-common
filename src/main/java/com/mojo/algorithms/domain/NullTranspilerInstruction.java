@@ -30,4 +30,8 @@ public class NullTranspilerInstruction extends TranspilerInstruction {
     public String toString() {
         return "NULL_INSTRUCTION";
     }
+
+    public Object getMetadata(String key) {
+        return metadata.get(key);
+    }
 }

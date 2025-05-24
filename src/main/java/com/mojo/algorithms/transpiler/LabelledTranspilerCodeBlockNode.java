@@ -27,4 +27,9 @@ public class LabelledTranspilerCodeBlockNode extends TranspilerCodeBlockNode {
     public String shortDescription() {
         return String.format("[CODE_BLOCK: %s] : ", name);
     }
+
+    @Override
+    public String label() {
+        return name;
+    }
 }
