@@ -1,18 +1,31 @@
 package com.mojo.algorithms.domain;
 
+import com.google.common.collect.ImmutableMap;
+import com.mojo.algorithms.id.Identifiable;
 import com.mojo.algorithms.id.InstructionLike;
 import lombok.Getter;
-import com.mojo.algorithms.id.Identifiable;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class BasicBlock<T extends InstructionLike> implements Identifiable {
-    @Getter private final List<T> instructions = new ArrayList<>();
+    @Getter
+    private final List<T> instructions = new ArrayList<>();
     private final String id;
+    private Map<String, Object> properties;
 
     public BasicBlock(String id) {
+        this(id, ImmutableMap.of());
+    }
+
+    public BasicBlock(String id, Map<String, Object> properties) {
         this.id = id;
+        this.properties = properties;
+    }
+
+    public Object getProperty(String property) {
+        return properties.get(property);
     }
 
     public void add(T instruction) {
