@@ -2,6 +2,7 @@ package com.mojo.algorithms.transpiler;
 
 import com.google.common.collect.ImmutableList;
 import com.mojo.algorithms.domain.TranspilerNode;
+import com.mojo.algorithms.string.TranspilerNodeFormatter;
 import lombok.Getter;
 import com.mojo.algorithms.domain.SemanticCategory;
 
@@ -13,6 +14,7 @@ public class IfTranspilerNode extends TranspilerNode {
     private final TranspilerNode condition;
     private final TranspilerNode ifThenBlock;
     private final TranspilerNode ifElseBlock;
+    private final TranspilerNodeFormatter formatter = new TranspilerNodeFormatter();
 
     public IfTranspilerNode(TranspilerNode condition, TranspilerNode ifThenBlock, TranspilerNode ifElseBlock) {
         super(ImmutableList.of(ifThenBlock, ifElseBlock), ImmutableList.of(SemanticCategory.DECISION));
@@ -35,6 +37,14 @@ public class IfTranspilerNode extends TranspilerNode {
     @Override
     public String description() {
         return String.format("if(%s) %n then %n{%n %s %n}%n %nelse %n{%n %s %n}%n", condition.description(), ifThenBlock.description(), ifElseBlock.description());
+    }
+
+    @Override
+    public String shortDescription() {
+        return String.format("if(%s) then { %s... } else { %s... }",
+                formatter.prettyShort(condition.shortDescription()),
+                formatter.prettyShort(ifThenBlock.shortDescription()),
+                formatter.prettyShort(ifElseBlock.shortDescription()));
     }
 
     @Override
