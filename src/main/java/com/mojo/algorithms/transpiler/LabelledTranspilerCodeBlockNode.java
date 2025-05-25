@@ -1,9 +1,9 @@
 package com.mojo.algorithms.transpiler;
 
 import com.google.common.collect.ImmutableList;
+import com.mojo.algorithms.domain.SemanticCategory;
 import com.mojo.algorithms.domain.TranspilerNode;
 import lombok.Getter;
-import com.mojo.algorithms.domain.SemanticCategory;
 
 import java.util.List;
 import java.util.Map;
@@ -13,7 +13,11 @@ public class LabelledTranspilerCodeBlockNode extends TranspilerCodeBlockNode {
     private final String name;
 
     public LabelledTranspilerCodeBlockNode(String name, List<TranspilerNode> children, Map<String, Object> properties) {
-        super(children, properties, ImmutableList.of(SemanticCategory.CODE_BLOCK));
+        this(name, children, properties, ImmutableList.of(SemanticCategory.CODE_BLOCK));
+    }
+
+    public LabelledTranspilerCodeBlockNode(String name, List<TranspilerNode> children, Map<String, Object> properties, List<SemanticCategory> categories) {
+        super(children, properties, categories);
         this.name = name;
     }
 
