@@ -4,9 +4,13 @@ import static org.apache.commons.lang3.StringUtils.truncate;
 
 public class TranspilerNodeFormatter {
     public String prettyShort(String s, int maxLength) {
-        return truncate(s.trim()
+        return truncate(squish(s), maxLength);
+    }
+
+    public String squish(String s) {
+        return s.trim()
                 .replaceAll("\\s+", " ")
-                .replaceAll("\n", " "), maxLength);
+                .replaceAll("\n", " ");
     }
 
     public String prettyShort(String s) {
