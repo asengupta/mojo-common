@@ -56,7 +56,6 @@ public class BasicBlock<T extends InstructionLike> implements Identifiable {
     @Override
     public String label() {
         return id;
-//        return String.join("\n", instructions.stream().map(Object::toString).toList());
     }
 
     public boolean contains(T instruction, CodeSentinelType codeSentinelType) {

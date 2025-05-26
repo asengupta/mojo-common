@@ -9,7 +9,6 @@ public class GraphvizStyleScheme {
     private final Color fontColor;
     private final Shape shape;
     private final String style;
-//    private final DomainDocument notes;
 
     public GraphvizStyleScheme(Color backgroundFillColor, Color fontColor, Shape shape) {
         this(backgroundFillColor, fontColor, shape, "filled");
@@ -21,12 +20,6 @@ public class GraphvizStyleScheme {
         this.shape = shape;
         this.style = style;
     }
-//    public GraphvizStyleScheme(Color backgroundFillColor, Color fontColor, Shape shape, DomainDocument notes) {
-//        this.background = backgroundFillColor;
-//        this.fontColor = fontColor;
-//        this.shape = shape;
-//        this.notes = notes;
-//    }
 
     public GraphvizStyleScheme(Color backgroundFillColor, Color fontColor) {
         this(backgroundFillColor, fontColor, Shape.BOX);
