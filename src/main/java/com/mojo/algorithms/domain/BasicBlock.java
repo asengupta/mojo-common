@@ -3,6 +3,7 @@ package com.mojo.algorithms.domain;
 import com.google.common.collect.ImmutableMap;
 import com.mojo.algorithms.id.Identifiable;
 import com.mojo.algorithms.id.InstructionLike;
+import com.mojo.algorithms.list.CarCdr;
 import lombok.Getter;
 
 import java.util.ArrayList;
@@ -40,6 +41,9 @@ public class BasicBlock<T extends InstructionLike> implements Identifiable {
         return instructions.size();
     }
 
+    public T firstInstruction() {
+        return CarCdr.head(instructions).get();
+    }
     public T lastInstruction() {
         return instructions.getLast();
     }
