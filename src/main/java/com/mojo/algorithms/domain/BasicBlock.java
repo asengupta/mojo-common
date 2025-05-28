@@ -25,6 +25,12 @@ public class BasicBlock<T extends InstructionLike> implements Identifiable {
         this.properties = properties;
     }
 
+    public BasicBlock(String id, List<T> instructions, Map<String, Object> properties) {
+        this.id = id;
+        this.instructions.addAll(instructions);
+        this.properties = properties;
+    }
+
     public Object getProperty(String property) {
         return properties.get(property);
     }

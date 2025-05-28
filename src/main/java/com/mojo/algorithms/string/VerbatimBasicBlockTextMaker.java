@@ -4,7 +4,7 @@ import com.mojo.algorithms.domain.BasicBlock;
 import com.mojo.algorithms.domain.TranspilerInstruction;
 import com.mojo.algorithms.transpiler.IfTranspilerNode;
 
-public class VerbatimBasicBlockTextFormatter implements BasicBlockTextFormatter {
+public class VerbatimBasicBlockTextMaker implements BasicBlockTextMaker {
     private final TranspilerNodeFormatter textFormatter = new TranspilerNodeFormatter();
 
     @Override
