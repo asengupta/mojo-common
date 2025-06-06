@@ -32,8 +32,8 @@ public class GraphGenerator {
     }
 
     public void generateImage(String dotFilePath, String imageOutputPath) throws IOException, InterruptedException {
-        ImmutableList<String> graphGenerationCommand = ImmutableList.of("dot", "-Kdot", "-v5", "-Gsize=800,800\\!", "-Goverlap=scale", "-T" + outputFormat.extension(), "-Gnslimit=7", "-Gnslimit1=7", "-Gmaxiter=5000", "-Gnodesep-0.5", "-Granksep=0.5", "-Gpack=true", String.format("-Gsplines=%s", outputFormat.lineStyle()), dotFilePath, String.format("-o%s", imageOutputPath));
-//        String graphGenerationCommand = String.format("dot -Kdot -v5 -Gsize=800,800\\! -Goverlap=scale -Tpng -Gnslimit=7 -Gnslimit1=7 -Gmaxiter=5000 -Gsplines=line %s -o%s", dotFilePath, graphOutputPath);
+        ImmutableList<String> graphGenerationCommand = ImmutableList.of("dot", "-Kdot", "-v5", "-Gsize=800,800\\!", "-Goverlap=scale", "-T" + outputFormat.extension(), "-Gnodesep-0.5", "-Granksep=0.5", "-Gpack=true", String.format("-Gsplines=%s", outputFormat.lineStyle()), dotFilePath, String.format("-o%s", imageOutputPath));
+//        String graphGenerationCommand = String.format("dot -Kdot -v5 -Gsize=800,800\\! -Goverlap=scale -Tpng -Gnslimit=7 -Gnslimit1=7 -Gnodesep-0.5 -Granksep=0.5 -Gmaxiter=5000 -Gsplines=line %s -o%s", dotFilePath, graphOutputPath);
         Process p = new ProcessBuilder(graphGenerationCommand).inheritIO().start();
         int rc = p.waitFor();
 //        Process pr = rt.exec(graphGenerationCommand);
