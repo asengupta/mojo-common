@@ -17,6 +17,10 @@ This prints out all levels
 ----------------------------
 dot -Kdot -v5 -Gsize=200,200\! -Goverlap=scale -Tpng -Gnslimit=4 -Gnslimit1=4 -Gmaxiter=2000 -Gsplines=line dotfile.dot -oflowchart-level5.png
 
+For large complex graphs, go all out with this
+-------------------------------------------------------
+
+dot -Kdot -v5 -Gsize=800,800\! -Goverlap=scale -Tsvg  -Gnodesep-0.5 -Granksep=0.5 -Gpack=true -Gsplines=ortho flowchart.dot -oflowchart.svg
  */
 
 public class GraphGenerator {
